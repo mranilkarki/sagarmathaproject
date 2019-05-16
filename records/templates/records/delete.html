@@ -1,10 +1,6 @@
 {% extends 'records/sasslist.html' %}
 {% block content %}
- <script>
-     alert("are you sure you want to delete");
-     
-
- </script>
+ 
  <form method="POST">
         {% csrf_token %}
 <a href="{% url 'records:NameOfStudents' %}"><button type="submit">delete</button></a>

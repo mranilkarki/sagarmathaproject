@@ -20,7 +20,10 @@
     
     {% endfor %}
 <div class="col-sm-12">
-    <a href="{% url 'records:NameOfStudents' %}"><button type="submit">register</button></a>
+        <a href="{% url 'records:NameOfStudents' %}"><button type="submit" class="btn btn-primary">
+                Register
+              </button>
+    
     <a href="{% url 'records:NameOfStudents' %}"><button type="button">Cancel</button></a>
     
 </div>

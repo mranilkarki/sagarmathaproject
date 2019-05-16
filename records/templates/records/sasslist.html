@@ -62,7 +62,7 @@
 </div>
     
                 <div class="col-md-12">
-                    {% block content %}
+                  {% block content %}
                     <form id="searchform" action="{% url 'records:search' %}" method="post" accept-charset="utf-8">
                         
                        <span style="float:right"> <input class="searchfield" id="searchbox" name="name" type="text" placeholder="Search" >
@@ -75,6 +75,7 @@
                           </a></span>
                         {% csrf_token %}
                       </form>
+                     
                   
                     <table class='table table-responsive-sm'>
                             <caption class="text-center"  style="color: rgb(20, 20, 43)">
@@ -104,7 +105,7 @@
                            
                                 {% for lists in list %}
 
-                                            <tr class="th_style">
+                                            <tr class="th_style" style="border: 1px solid black;">
                                                 <td width='20px'>{{ forloop.counter }}</td>
                                                 <td>
                                            {{ lists.name }}
@@ -137,7 +138,6 @@
                                             
                                              <!-- <td><a href="{% url 'records:delete' pk=lists.pk %}">delete</a></td>
                                             
-
                                             <td><a href="{% url 'records:edit' pk=lists.pk %}">edit</a></td>
                                              -->
                                             </tr>

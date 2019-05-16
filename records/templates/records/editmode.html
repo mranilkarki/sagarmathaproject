@@ -24,12 +24,18 @@
       
                   <div class="col-md-12">
                       {% block content %}
-                      <form id="searchform" action="{% url 'records:search' %}" method="get" accept-charset="utf-8">
-                          <button class="searchbutton" type="submit">
-                            <i class="fa fa-search"></i>
-                          </button>
-                          <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
-                        </form>
+                      <form id="searchform" action="{% url 'records:search' %}" method="post" accept-charset="utf-8">
+                        
+                        <span style="float:right"> <input class="searchfield" id="searchbox" name="name" type="text" placeholder="Search" >
+                         <button class="searchbutton" type="submit">
+                             <i class="fas fa-search" style="height:14px;margin:10px;"></i>
+                           </button>
+                           <a href="{% url 'records:NameOfStudents' %}"><button type="button" class="btn btn-primary">
+                               Back
+                             </button>
+                           </a></span>
+                         {% csrf_token %}
+                       </form>
                     
                       <table class='table table-responsive-sm'>
                               <caption class="text-center"  style="color: rgb(20, 20, 43)">

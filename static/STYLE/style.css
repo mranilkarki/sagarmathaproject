@@ -1,14 +1,18 @@
 body{
     background-color: red;
 }
+.th_style{
+border-left: 10px solid green;;
+}
 .th_style:hover{
-    
+    background-color: rgb(20, 20, 43);
     color: white;
-    transition: linear .2s;
+    transition: linear .5s;
 
 }
 .searchfield{
-    background-color: red;
+    background-color: rgb(20, 20, 43);
     height: 200px;
     width: 300px;
+    color:white;
 }

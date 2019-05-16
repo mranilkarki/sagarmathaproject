@@ -88,9 +88,9 @@ def delete(request, pk):
         messages.success(request, 'messages successfully deleted')
         return redirect('/list/')
         
-    else:
+    # else:
         
-        return render(request, 'records/delete.html')
+    #     return render(request, 'records/delete.html')
 
 
 
